@@ -16,6 +16,7 @@ extrn get_cores
 extrn hyperthread
 extrn sgx
 extrn check_aes
+extrn vmx
 
 section '.text' executable
 
@@ -28,6 +29,7 @@ main:
 	call hyperthread
 	call sgx
 	call check_aes
+	call vmx
 	leave
 	ret
 
