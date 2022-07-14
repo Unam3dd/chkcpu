@@ -17,6 +17,8 @@ extrn hyperthread
 extrn sgx
 extrn check_aes
 extrn vmx
+extrn sse
+extrn avx
 
 section '.text' executable
 
@@ -30,6 +32,8 @@ main:
 	call sgx
 	call check_aes
 	call vmx
+	call sse
+	call avx
 	leave
 	ret
 
